@@ -11,6 +11,7 @@ from langchain.chains.question_answering import load_qa_chain
 from langchain.prompts import PromptTemplate
 from dotenv import load_dotenv
 
+# Load environment variables
 load_dotenv()
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
@@ -27,9 +28,8 @@ def get_text():
                         "container",
                         "mx-auto my-10",
                         "bg-primary py-20 mx-auto",
-                        "footer md:flex md:justify-center md:items-center text-[#ffffff]")
+                        "footer md:flex md:justify-center md:items-center text-[#ffffff]"))
             ))
-        )
         text_documents = loader.load()
         all_text_documents.extend(text_documents)
     
@@ -43,10 +43,15 @@ def get_text_chunks():
     return texts
 
 def get_vector_store():
-    text_chunks = get_text_chunks()
-    embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
-    vector_store = FAISS.from_texts(text_chunks, embedding=embeddings)
-    vector_store.save_local("faiss_index")
+    # Check if FAISS index already exists
+    if not os.path.exists("faiss_index/index.faiss"):
+        st.info("FAISS index not found. Generating a new index...")
+        text_chunks = get_text_chunks()
+        embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
+        vector_store = FAISS.from_texts(text_chunks, embedding=embeddings)
+        vector_store.save_local("faiss_index")
+    else:
+        st.info("FAISS index already exists. Loading the index...")
 
 def get_conversational_chain():
     prompt_template = """
@@ -72,7 +77,9 @@ def user_input(user_question):
     st.write("", response["output_text"])
 
 def main():
-    # get_vector_store()
+    # Ensure FAISS index is created or loaded
+    get_vector_store()
+
     st.set_page_config(page_title="HawkEyes")
     st.header("ChatBot For HawkEyes")
 
@@ -83,6 +90,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-# streamlit run he.py
