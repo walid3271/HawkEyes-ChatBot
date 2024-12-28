@@ -1,4 +1,7 @@
 import streamlit as st
+from langchain_community.document_loaders import WebBaseLoader
+import bs4
+from langchain.text_splitter import RecursiveCharacterTextSplitter
 import os
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 import google.generativeai as genai
@@ -12,13 +15,6 @@ load_dotenv()
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 def get_conversational_chain():
-    # prompt_template = """
-    # Answer the question as detailed as possible from the provided context. If the answer is not in the context, say "answer is not available in the context" and do not provide an incorrect answer.\n\n
-    # Context:\n{context}\n
-    # Question:\n{question}\n
-    # Answer:
-    # """
-    
     prompt_template = """
     Answer the question as detailed as possible from the provided context.\n\n
     Context:\n{context}\n
@@ -54,4 +50,4 @@ if __name__ == "__main__":
     main()
 
 
-# ChatBot/streamlit run he_test.py localhost:8000
+# streamlit run he.py
