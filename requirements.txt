@@ -1,88 +1,95 @@
-gitdb
-GitPython
-google-ai-generativelanguage
-google-api-core
-google-api-python-client
-google-auth
-google-auth-httplib2
-google-generativeai
-googleapis-common-protos
-greenlet
-grpcio
-grpcio-status
-httplib2
-idna
-ipykernel
-ipython
-jedi
-Jinja2
-jsonpatch
-jsonpointer
-jsonschema
-jsonschema-specifications
-jupyter_client
-jupyter_core
-langchain
-langchain-community
-langchain-core
-langchain-google-genai
-langchain-text-splitters
-langsmith
-markdown-it-py
-MarkupSafe
-marshmallow
-matplotlib-inline
-mdurl
-multidict
-mypy-extensions
-narwhals
-nest-asyncio
-numpy
-orjson
-packaging
-pandas
-parso
-pillow
-platformdirs
-prompt_toolkit
-proto-plus
-protobuf
-psutil
-pure_eval
-pyarrow
-pydantic
-pydantic_core
-pydeck
-Pygments
-pyparsing
-python-dateutil
+# gitdb
+# GitPython
+# google-ai-generativelanguage
+# google-api-core
+# google-api-python-client
+# google-auth
+# google-auth-httplib2
+# google-generativeai
+# googleapis-common-protos
+# greenlet
+# grpcio
+# grpcio-status
+# httplib2
+# idna
+# ipykernel
+# ipython
+# jedi
+# Jinja2
+# jsonpatch
+# jsonpointer
+# jsonschema
+# jsonschema-specifications
+# jupyter_client
+# jupyter_core
+# langchain
+# langchain-community
+# langchain-core
+# langchain-google-genai
+# langchain-text-splitters
+# langsmith
+# markdown-it-py
+# MarkupSafe
+# marshmallow
+# matplotlib-inline
+# mdurl
+# multidict
+# mypy-extensions
+# narwhals
+# nest-asyncio
+# numpy
+# orjson
+# packaging
+# pandas
+# parso
+# pillow
+# platformdirs
+# prompt_toolkit
+# proto-plus
+# protobuf
+# psutil
+# pure_eval
+# pyarrow
+# pydantic
+# pydantic_core
+# pydeck
+# Pygments
+# pyparsing
+# python-dateutil
+# python-dotenv
+# pytz
+# PyYAML
+# pyzmq
+# referencing
+# requests
+# rich
+# rpds-py
+# rsa
+# six
+# smmap
+# soupsieve
+# SQLAlchemy
+# stack-data
+# streamlit
+# tenacity
+# toml
+# tornado
+# tqdm
+# traitlets
+# typing-inspect
+# typing_extensions
+# tzdata
+# uritemplate
+# urllib3
+# watchdog
+# wcwidth
+# yarl
+# bs4
+# faiss-cpu
+
+streamlit 
+langchain-google-genai 
+google-generativeai 
+langchain 
+faiss-cpu 
 python-dotenv
-pytz
-PyYAML
-pyzmq
-referencing
-requests
-rich
-rpds-py
-rsa
-six
-smmap
-soupsieve
-SQLAlchemy
-stack-data
-streamlit
-tenacity
-toml
-tornado
-tqdm
-traitlets
-typing-inspect
-typing_extensions
-tzdata
-uritemplate
-urllib3
-watchdog
-wcwidth
-yarl
-bs4
-faiss-cpu
