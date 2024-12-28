@@ -85,4 +85,4 @@ watchdog
 wcwidth
 yarl
 bs4
-faiss-gpu
+faiss-cpu
