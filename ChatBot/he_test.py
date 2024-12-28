@@ -50,13 +50,13 @@ def get_vector_store():
 
 def get_conversational_chain():
     prompt_template = """
-    Answer the question as detailed as possible from the provided context. If the answer is not in the context, say "answer is not available in the context" and do not provide an incorrect answer.\n\n
+    Answer the question as detailed as possible from the provided context.\n\n
     Context:\n{context}\n
     Question:\n{question}\n
     Answer:
     """
 
-    model = ChatGoogleGenerativeAI(model="gemini-pro", temperature=0.5)
+    model = ChatGoogleGenerativeAI(model="gemini-pro", temperature=0.9)
     prompt = PromptTemplate(template=prompt_template, input_variables=["context", "question"])
     chain = load_qa_chain(model, chain_type="stuff", prompt=prompt)
     return chain
@@ -85,4 +85,4 @@ if __name__ == "__main__":
     main()
 
 
-# streamlit run he.py
+# streamlit run he_test.py
